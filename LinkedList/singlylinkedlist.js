@@ -21,7 +21,7 @@ LinkedList.prototype.insertAtBegininng = function (data) {
 
 // Insert at the end
 LinkedList.prototype.insertAtEnd = function (data) {
-  const newNode = new Node();
+  const newNode = new Node(data);
 
   //   this move head to end if the head is null
   if (!this.head) {
@@ -138,5 +138,35 @@ LinkedList.prototype.traverse = function () {
   if (listValues.length === 0) {
     console.log("The list is empty!");
   }
-  console.log(listValues.join(" ->"));
+  console.log(listValues.join(" -> "));
 };
+
+// Reverse a Linked List
+LinkedList.prototype.reverse = function () {
+  let current = this.head;
+  let prev = null;
+  let next = null;
+
+  while (current) {
+    next = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
+  }
+  this.head = prev;
+};
+
+let myList = new LinkedList();
+
+for (let i = 0; i <= 100; i++) {}
+
+myList.insertAtBegininng(10);
+myList.insertAtEnd(5);
+myList.insertAtEnd(19);
+myList.insertAtEnd(25);
+
+myList.traverse();
+
+myList.insertAfter(myList.head.next.next.next, 2);
+
+myList.traverse(); // Output: 10 -> 9 -> 51 -> 2 -> 4 -> 83 -> 45
