@@ -158,8 +158,6 @@ LinkedList.prototype.reverse = function () {
 
 let myList = new LinkedList();
 
-for (let i = 0; i <= 100; i++) {}
-
 myList.insertAtBegininng(10);
 myList.insertAtEnd(5);
 myList.insertAtEnd(19);
