@@ -1,3 +1,4 @@
+// *-*-*-*-*-* Creating Node *-*-*-*-*-*
 class Node {
   constructor(data, next = null) {
     this.data = data;
@@ -11,7 +12,7 @@ class LinkedList {
   }
 }
 
-// ----- Insertion -----
+// *-*-*-*-*-* INSERTION *-*-*-*-*-*
 
 // Insert at the start
 LinkedList.prototype.insertAtBegininng = function (data) {
@@ -50,7 +51,7 @@ LinkedList.prototype.insertAfter = function (prevNode, data) {
   prevNode.next = newNode;
 };
 
-// ----- Deletion -----
+// *-*-*-*-*-* Deletion *-*-*-*-*-*
 
 // Delete at the Start or Delete Head
 LinkedList.prototype.deleteHead = function () {
@@ -112,7 +113,7 @@ LinkedList.prototype.deleteByKey = function (key) {
   console.log("No node found with this key: ", key);
 };
 
-// ----- Searching -----
+// *-*-*-*-*-* Searching *-*-*-*-*-*
 LinkedList.prototype.search = function (key) {
   let current = this.head;
 
@@ -124,7 +125,7 @@ LinkedList.prototype.search = function (key) {
   return false;
 };
 
-// ----- Traversal/Printing -----
+// *-*-*-*-*-* Traverse/Printing *-*-*-*-*-*
 LinkedList.prototype.traverse = function () {
   let current = this.head;
 
@@ -141,7 +142,7 @@ LinkedList.prototype.traverse = function () {
   console.log(listValues.join(" -> "));
 };
 
-// Reverse a Linked List
+// *-*-*-*-*-* Reverse *-*-*-*-*-*
 LinkedList.prototype.reverse = function () {
   let current = this.head;
   let prev = null;
@@ -155,6 +156,8 @@ LinkedList.prototype.reverse = function () {
   }
   this.head = prev;
 };
+
+// *-*-*-*-*-* Usage *-*-*-*-*-*
 
 let myList = new LinkedList();
 
