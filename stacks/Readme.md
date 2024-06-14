@@ -1,16 +1,16 @@
 # Stack Class Implementation in JavaScript
 
-#### Stacks are a data structure that store information in a form of a list. They allow only adding & removing elements under a **_LIFO_** pattern.
+Stacks are a data structure that store information in a form of a list. They allow only adding & removing elements under a **_LIFO_** pattern.
 
-#### Stacks are useful when we need to make sure elements follow the **_LIFO_** method.
+Stacks are useful when we need to make sure elements follow the **_LIFO_** method.
 
 ## Usage Of Stacks:
 
-#### &#10687; Javascript's Call Stack.
+&#10687; Javascript's Call Stack.
 
-#### &#10687; Managing function invocation in various programming languages.
+&#10687; Managing function invocation in various programming languages.
 
-#### &#10687; The undo/redo functionality many programs offers.
+&#10687; The undo/redo functionality many programs offers.
 
 ```javascript
 class Stack {
