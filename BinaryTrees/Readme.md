@@ -22,13 +22,23 @@ A binary tree is a type of data structure where every node can have a maximum of
 
 &#10687; **Full Binary Tree** &#8227; Each node has either 0 or 2 children.
 
+![Screenshot Full Binary Tree](../assets/Full%20Binary%20Tree.png)
+
 &#10687; **Complete Binary Tree** &#8227; All levels, except possibly the last, are fully filled, and all nodes are as left as possible.
+
+![Screenshot Complete Binary Tree](../assets/Complete%20Binary%20Tree.png)
 
 &#10687; **Perfect Binary Tree** &#8227; Every internal node has two children exactly, and every leaf node is at the same level.
 
+![Screenshot Perfect Binary Tree](../assets/Perfect%20Binary%20Tree.png)
+
 &#10687; **Balanced Binary Tree** &#8227; Any given node's left and right subtrees differ in height by a maximum of one.
 
+![Screenshot Balanced Binary Tree](../assets/Balanced%20Binary%20Tree.png)
+
 &#10687; **Binary Search Tree (BST)** &#8227; A binary tree that allows for efficient searches is called a Binary Search Tree (BST), in which the children on the left are smaller than the node and the children on the right are larger.
+
+![Screenshot Binary Search Tree](../assets/BST.png)
 
 ## Binary Search Tree in Brief
 
