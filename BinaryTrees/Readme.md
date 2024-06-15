@@ -62,6 +62,8 @@ A binary tree is a type of data structure where every node can have a maximum of
 
 &#10687; **Expression Trees** &#8227; Used in syntax tree parsing and expression representation in compilers.
 
+# Must Read - difference between binary search tree and directed graph
+
 ## Author
 
 ### Akhil Nagpal
