@@ -1,6 +1,6 @@
-# Core Impletion of Binary Search Tree
+# Core Implementation of Binary Search Tree
 
-&#10687; First &#8227; We need to make a Binary Search Tree Node. This Node is same as Doubly Linked List Node but the pointera act as in tree format.
+&#10687; First &#8227; We must make a Binary Search Tree Node. This Node is the same as the Doubly Linked List Node but the pointera acts as in tree format.
 
 ### Node &#8227;
 
