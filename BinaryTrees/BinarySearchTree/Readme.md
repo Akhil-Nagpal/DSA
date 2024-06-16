@@ -136,7 +136,7 @@ inOrderTraversal() {
   }
 ```
 
-#### Visualisation &#8227;
+#### Visualization &#8227;
 
 ![Screenshot In-order Traversal](../../assets/In-order%20traversal.png)
 
@@ -161,7 +161,7 @@ inOrderTraversal() {
   }
 ```
 
-#### Visualisation &#8227;
+#### Visualization &#8227;
 
 ![Screenshot Pre-order Traversal](../../assets/pre-order%20traversal.png)
 
@@ -186,6 +186,6 @@ postOrderTraversal() {
   }
 ```
 
-#### Visualisation &#8227;
+#### Visualization &#8227;
 
 ![Screenshot Post-order Traversal](../../assets/Post-order%20Traversal.png)
