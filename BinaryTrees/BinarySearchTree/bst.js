@@ -72,18 +72,51 @@ class BinarySearchTree {
   //   }
   // }
 
-  // *-*-*-*-*-* IN-ORDER TRAVERSAL *-*-*-*-*-*
+  // *-*-*-*-*-* TRAVERSAL OF BINARY TREES *-*-*-*-*-*
+  // ----- IN-ORDER TRAVERSAL -----
   inOrderTraversal() {
     const result = [];
     this.inOrder(this.root, result);
     console.log(result);
   }
 
+  // Helper Function
   inOrder(root, result) {
     if (root !== null) {
       this.inOrder(root.left, result);
       result.push(root.key);
       this.inOrder(root.right, result);
+    }
+  }
+
+  // ----- PRE-ORDER TRAVERSAL -----
+  preOrderTraversal() {
+    const result = [];
+    this.preOrder(this.root, result);
+    console.log(result);
+  }
+
+  // Helper Function
+  preOrder(root, result) {
+    if (root !== null) {
+      result.push(root.key);
+      this.preOrder(root.left, result);
+      this.preOrder(root.right, result);
+    }
+  }
+
+  postOrderTraversal() {
+    const result = [];
+    this.postOrder(this.root, result);
+    console.log(result);
+  }
+
+  // Helper Functions
+  postOrder(root, result) {
+    if (root !== null) {
+      this.postOrder(root.left, result);
+      this.postOrder(root.right, result);
+      result.push(root.key);
     }
   }
 }
@@ -97,4 +130,6 @@ bst.insert(21);
 bst.insert(27);
 bst.insert(29);
 
-bst.inOrderTraversal();
+// bst.inOrderTraversal();
+// bst.preOrderTraversal();
+// bst.postOrderTraversal();
