@@ -6,7 +6,7 @@ Recursion is a programming method in which a function calls itself to work throu
 
 &#10687; **Recursive Case** &#8227; The section of the function that calls itself using the smaller instances of the problem after breaking it down into smaller ones.
 
-## Example:
+### Example &#8227;
 
 For example, utilizing recursion to calculate a number's factorial is defined as:
 
@@ -45,3 +45,50 @@ factorial(5); // Output: 120
 &#10687; **Elegant Code** &#8227; results in code that is frequently shorter and easier to read.
 
 &#10687; **Natural Fit** &#8227; Perfect for naturally recursive tasks like divide-and-conquer algorithms and tree traversals.
+
+## Directed & Indirected Recursion
+
+### Directed Recursion
+
+When a function calls itself directly, it is referred to as direct recursion. This is the simplest variant of recursion.
+
+### Example &#8227;
+
+Here is the same example as the one I gave above.
+
+```javascript
+function factorial(n) {
+  // Base Case -> if the factorial hits 0 then return 1
+  if (n === 0) {
+    return 1;
+  }
+
+  //   Recursive Case
+  return n * factorial(n - 1);
+}
+```
+
+### Indirected Recursion
+
+When a function calls another function, which then calls the original function, this is known as indirect recursion. A loop of function calls is produced by this.
+
+### Example &#8227;
+
+```javascript
+function isEven(n) {
+  if (n === 0) {
+    return true; // Base case
+  }
+  return isOdd(n - 1); // Indirect recursive call
+}
+
+function isOdd(n) {
+  if (n === 0) {
+    return false; // Base case
+  }
+  return isEven(n - 1); // Indirect recursive call
+}
+
+console.log(isEven(4)); // Output: true
+console.log(isOdd(3)); // Output: true
+```
