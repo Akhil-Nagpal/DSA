@@ -6,17 +6,17 @@
 // if not found = -1
 
 // *-*-*-*-*-* Itrative Approach *-*-*-*-*-*
-// function firstOcc(arr, findMe, currentIndex) {
-//   // check if the current Index is less then array length in a loop
-//   while (currentIndex < arr.length) {
-//     // check if the array's current index is equals to find me
-//     if (arr[currentIndex] === findMe) {
-//       return currentIndex;
-//     }
-//     currentIndex = currentIndex + 1;
-//   }
-//   return -1;
-// }
+function firstOcc(arr, findMe, currentIndex) {
+  // check if the current Index is less then array length in a loop
+  while (currentIndex < arr.length) {
+    // check if the array's current index is equals to find me
+    if (arr[currentIndex] === findMe) {
+      return currentIndex;
+    }
+    currentIndex = currentIndex + 1;
+  }
+  return -1;
+}
 
 // *-*-*-*-*-* Recursive Approach *-*-*-*-*-*
 function recursiveFirstOcc(arr, findMe, currentIndex) {
