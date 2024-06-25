@@ -1,10 +1,19 @@
 // *-*-*-*-* FIND OCCURANCE OF VALUE WITH GIVEN KEY IN AN ARRAY *-*-*-*-*
 
 // *-*-*-*-* Iterative Approach *-*-*-*-*
-// s
+function keyOccurance(array, key) {
+  let result = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === key) {
+      result = result + 1;
+    }
+  }
+  return result;
+}
 
 // *-*-*-*-* Usage *-*-*-*-*
-// console.log(keyOccurance([2, 1, 2, 5, 6], 2));
+console.log(keyOccurance([2, 1, 2, 5, 6], 2));
 
 // *-*-*-*-* Recursive Approach *-*-*-*-*
 function recursiveKeyOcc(array, key, index = 0) {
@@ -27,4 +36,4 @@ function recursiveKeyOcc(array, key, index = 0) {
   }
 }
 
-console.log(recursiveKeyOcc([2, 1, 2, 5, 6], 2));
+// console.log(recursiveKeyOcc([2, 1, 2, 5, 6], 2));
