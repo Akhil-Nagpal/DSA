@@ -12,7 +12,7 @@ function fibonacci(value) {
   }
   return n0;
 }
-console.log(fibonacci(15));
+console.log(fibonacci(5));
 
 // *-*-*-*-* Recursive Approach *-*-*-*-*
 function recursiveFibonacci(value) {
