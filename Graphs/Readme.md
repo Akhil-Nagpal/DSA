@@ -79,3 +79,5 @@ In sports data science, graph data structures can be utilized to analyze and und
 ![Screenshot Sparse Graph](../assets/Sparse%20Graph.png)
 
 &#10687; **Dense Graphs** &#8227; A graph that has more edges than vertices. In a social network graph, each vertex represents a person and each edge indicates a friendship.
+
+![Screenshot Dense Graph](../assets/Dense%20Graph.png)
