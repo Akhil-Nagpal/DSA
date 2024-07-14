@@ -1,7 +1,7 @@
 // *-*-*-*-* FIND THE FIBONACCI USING DYNAMIC PROGRAMMING WITH TABULATION APPROACH *-*-*-*-*
 
 function fibonacciTab(n) {
-  // Base Casees
+  // Base Cases
   // Case 1 -> if n is 0, return 0 (since the 0th Fibonacci number is 0)
   if (n === 0) {
     return 0;
