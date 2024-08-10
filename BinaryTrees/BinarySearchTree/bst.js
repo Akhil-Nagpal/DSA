@@ -125,6 +125,57 @@ class BinarySearchTree {
     return root;
   }
 
+  // Deletes a node with the given key from the tree.
+  delete(key) {
+    this.root = this.deleteNode(this.root, key);
+  }
+
+  // Recursively deletes a node with the given key from the subtree rooted at 'root'.
+  deleteNode(root, key) {
+    // Base case -> If the root is null, the key is not found.
+    if (root === null) {
+      return null;
+    }
+
+    // Traverse the left subtree if the key is less than the root's key.
+    if (key < root.key) {
+      root.left = this.deleteNode(root.left, key);
+      // Traverse the right subtree if the key is greater than the root's key.
+    } else if (key > root.key) {
+      root.right = this.deleteNode(root.right, key);
+    } else {
+      // Node with the key to be deleted is found.
+      // Case 1: Node has no children (leaf node).
+      if (root.left === null && root.right === null) {
+        return null;
+        // Case 2: Node has only one child (right child).
+      } else if (root.left === null) {
+        return root.right;
+        // Case 3: Node has only one child (left child).
+      } else if (root.right === null) {
+        return root.left;
+        // Case 4: Node has two children.
+      } else {
+        // Find the maximum node in the left subtree. (In-order Precessor)
+        let tempNode = this.findMaxNode(root.left);
+        // Replace the root's key with the maximum key found.
+        root.key = tempNode.key;
+        // Delete the node with the maximum key in the left subtree.
+        root.left = this.deleteNode(root.left, tempNode.key);
+      }
+      return root;
+    }
+  }
+
+  // Finds the node with the maximum key in the subtree rooted at 'root'.
+  findMaxNode(root) {
+    // Traverse to the rightmost node.
+    while (root.right !== null) {
+      root = root.right;
+    }
+    return root;
+  }
+
   // *-*-*-*-*-* TRAVERSAL OF BINARY TREES *-*-*-*-*-*
 
   // ----- IN-ORDER TRAVERSAL -----
