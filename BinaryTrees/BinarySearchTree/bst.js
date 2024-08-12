@@ -241,6 +241,6 @@ bst.insert(27);
 bst.insert(29);
 
 // Uncomment the following lines to see the traversal outputs
-// bst.inOrderTraversal(); // Should print the BST keys in ascending order
-// bst.preOrderTraversal(); // Should print the BST keys in pre-order
-// bst.postOrderTraversal(); // Should print the BST keys in post-order
+bst.inOrderTraversal(); // Should print the BST keys in ascending order
+bst.preOrderTraversal(); // Should print the BST keys in pre-order
+bst.postOrderTraversal(); // Should print the BST keys in post-order

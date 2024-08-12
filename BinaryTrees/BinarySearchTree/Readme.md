@@ -113,6 +113,63 @@ class BinarySearchTree {
   }
 ```
 
+## Deletion Method in Binary Search Tree
+
+### Deletion using recursion
+
+```javascript
+// *-*-*-*-*-* DELETION *-*-*-*-*-*
+
+// Deletes a node with the given key from the BST
+  delete(key) {
+    this.root = this.deleteNode(this.root, key); // Update the root after deletion
+  }
+
+  // Helper function to delete a node with the given key
+  deleteNode(root, key) {
+    // Base Case -> If the root is null (key not found)
+    if (root === null) {
+      return null;
+    }
+
+    // Traverse the tree to find the node to delete
+    if (key < root.key) {
+      root.left = this.deleteNode(root.left, key); // Traverse the left subtree
+    } else if (key > root.key) {
+      root.right = this.deleteNode(root.right, key); // Traverse the right subtree
+    } else {
+      // Node with the key found
+      // Case 1 -> Node is a leaf node (no children)
+      if (root.left === null && root.right === null) {
+        return null;
+      }
+      // Case 2 -> Node has only one child
+      else if (root.left === null) {
+        return root.right; // Replace node with its right child
+      } else if (root.right === null) {
+        return root.left; // Replace node with its left child
+      }
+      // Case 3 -> Node has two children
+      else {
+        // Find the minimum value node in the right subtree (In-order Successor)
+        let tempNode = this.findMinNode(root.right);
+        root.key = tempNode.key; // Replace the key with the successor's key
+        root.right = this.deleteNode(root.right, tempNode.key); // Delete the successor
+      }
+    }
+    return root;
+  }
+
+  // Finds the node with the minimum value in the subtree
+  findMinNode(root) {
+    // Traverse to the leftmost node
+    while (root.left !== null) {
+      root = root.left;
+    }
+    return root;
+  }
+```
+
 ## Traversal of Binary Search Tree
 
 ### In-order Traversal
