@@ -1,8 +1,11 @@
 # Stack Class Implementation in JavaScript
 
 Stacks are a data structure that store information in a form of a list. They allow only adding & removing elements under a **_LIFO_** pattern.
+A Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be **_LIFO(Last In First Out)_** or **_FILO(First In Last Out)_**. LIFO implies that the element that is inserted last, comes out first and FILO implies that the element that is inserted first, comes out last.
 
 Stacks are useful when we need to make sure elements follow the **_LIFO_** method.
+
+![Screenshot Stacks](../assets/Stacks.png)
 
 ## Usage Of Stacks:
 
